@@ -130,7 +130,7 @@ body{
 /* home section nav*/
 #first{
     /* background-image: url(Images/bg14a.jpg); */
-    background-image: url("/Images/bg15a.png"), url("Images/banner21a.png"), url("Images/bg3.jpg");
+    background-image: url("Images/bg15a.png"), url("Images/banner21a.png"), url("Images/bg3.jpg");
     background-color: #cbdfee;
     height: 90vh;
     width: 100%; 
