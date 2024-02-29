@@ -3,17 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <title>Family</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/345fb7ca25.js" crossorigin="anonymous"></script>
+
+    <style>
+      *{
+        margin: 0;
+      }
+      /* nav bar */
+      #header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+        background-color: rgb(203, 223, 238);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 63px;
+      }
+      .logo{
+        height: 60px;
+      }
+      #navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #navbar li{
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+      }
+      #navbar li a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Source Code Pro', monospace;
+        color: rgb(169, 0, 184);
+        transition: 0.5s ease;
+      } 
+      #navbar li a:hover, #navbar li a.active{
+        color: rgb(0, 76, 156);
+      }
+      #navbar li a.active::after, #navbar li a:hover::after{
+        content: "";
+        width: 30%;
+        height: 2px;
+        background: rgb(0, 76, 156);
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+      }
+      #mobile{
+        display: none;
+        align-items: center;
+      }
+      #close{
+        display: none;
+      }
+      #signout{
+        display: none;
+      }
+
+      /* Media Query */
+      @media (max-width:799px) {
+        .section-p1{
+            padding: 40px 40px;
+        }
+        .section-p2{
+            padding: 20px 10px;
+        }
+        .section-p3{
+            padding: 20px 10px;
+        }
+        #navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            height: 100vh;
+            width: 300px;
+            background-color: rgb(212, 238, 255);
+            box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+            padding: 80px 0 0 10px;
+            transition: 0.4s;
+        }
+        #navbar.active{
+            right: 0;
+        }
+        #navbar li{
+            margin-bottom: 25px;
+        }
+        #mobile{
+            display: flex;
+            align-items: center;
+        }
+        #mobile i{
+            color: #1a1a1a;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+        #close{
+            display: initial;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            color: #1a1a1a;
+            font-size: 20px;
+        }
+        #lg-bag{
+            display: none;
+        }
+        #signout{
+            display: flex;
+        }
+      }
+    </style>
 </head>
+
 <body>
-<div class="bg-cover bg-center" style="background-image: url(Images/bg1.jpg) " >
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-3xl font-bold tracking-tight text-purple-900 sm:text-4xl">From Our Family:</h2>
-      <p class="mt-2 text-lg leading-8 text-lavender-600">Learn some more about RIRO </p>
+  <!-- logo and navbar -->
+  <section id="header">
+    <a href="index.html"><img width="80"  src="Images/Riro.png" class="logo" alt=""></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a class="active" href="blog.html">Blog</a></li>
+        <li><a id="lg-bag" href="#"><i class="fa-solid fa-cart-shopping"></i>
+        </a></li>
+        <li>
+          <a id="signout" href="sign-out.html">Sign out </a>
+          <a href="sign-out.html"><i id="lg-bag" class="fa-solid fa-right-from-bracket"></i></a></li>
+        <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+      </ul>
     </div>
-     <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+
+    <!-- Responsiveness -->
+    <div id="mobile">
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section>
+
+
+  <!-- blog page (family) -->
+<div class="bg-cover bg-center" style="background-image: url(Images/bg1.jpg)" >
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 py-16" style=".py-16 {padding-top: 6rem; padding-bottom: -3rem;}">
+      <h2 class="text-3xl font-bold tracking-tight text-purple-900 sm:text-4xl">From Our Family:</h2>
+      <p class="mt-2 text-lg text-lavender-600">Learn some more about RIRO </p>
+    </div>
+    <div class="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-8 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       <article class="flex max-w-xl flex-col items-start justify-between">
         <div class="flex items-center gap-x-4 text-xs">
           <time datetime="2020-03-16" class="text-gray-500">Feburary 10,2024</time>
@@ -268,5 +422,6 @@
   </div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
