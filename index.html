@@ -23,6 +23,25 @@
         .hidden {
             display: none;
         }
+/* 	    color change animation */
+	    .colorchange {  
+  animation-name:colorchange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+ 
+}
+.colorchange:hover {  
+  animation: none;
+}
+@keyframes colorchange {
+  0% { color:#ff80b5;}
+  25% { color:#c880ff;}
+  50% { color:#60c7da;}
+  75% { color:#c880ff;}
+  100%{ color:#ff80b5;}
+    
+}
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,7 +178,7 @@
             <div>
                 <div id="textContent" class="text-center hidden">
                       <img src="Images/backindex.png" alt="" class="brighteness-200 absolute inset-0 -z-10 h-[100vh] w-full brightness-120 object-cover object-right md:object-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-purple-900 sm:text-6xl">Welcome to RIRO</h1>
+                    <h1 class="text-4xl font-bold tracking-tight text-purple-900 sm:text-6xl">Welcome to <span class='colorchange text-6xl'> RIRO </span></h1>
                 <p class="mt-10 text-sm overflow-hidden text-gray-600 lg:text-2xl lg:leading-7 ">Where emotion meets elegance in every stitch. Our garments transcend mere attire, inviting you into a world where self-expression knows no bounds. Feel the exhilaration as our fabrics cascade around you, weaving stories of passion and creativity. From the delicate whispers of chiffon to the bold declarations of leather, each piece is a canvas for your emotions. Embrace the tears shed over a perfect fit, the joy of discovering a signature style, and the pride in wearing your heart on your sleeve.At RIRO, we believe style is more than just dressing – it's an emotional odyssey, where every garment reflects the depths of our human experience. Join us as we redefine sophistication through the lens of feeling, where every creation is a masterpiece of sentiment and sophistication. </p>
                 </div>
                 <div class="mt-80 sm:mt-30 flex items-center justify-center gap-x-6" id="newcollection">
