@@ -8,7 +8,7 @@ header, footer {
   background-color: rgb(243, 204, 255);
   color: #fff;
   text-align: center;
-  padding: 1em 0;
+  padding: 0;
 }
 
 main {
@@ -55,7 +55,7 @@ button:hover {
 }
 
 footer {
-  position: fixed;
+
   bottom: 0;
   width: 100%;
 }
