@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <style>
+        /* Additional custom styles */
+        .animation {
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-purple-400">
+    <div class="container mx-auto mt-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center animation">
+            <h1 class="text-3xl font-bold mb-4">Thank You For Your Order!</h1>
+            <p class="text-gray-600 mb-4">We appreciate your business.</p>
+            <p class="text-gray-600">Your order will be processed shortly.</p>
+        </div>
+    </div>
+
+    <!-- Optional: Add JavaScript for additional animations -->
+    <script>
+        // Optional: Add additional animations with JavaScript
+        const animationElements = document.querySelectorAll('.animation');
+        animationElements.forEach(element => {
+            element.classList.add('animate_animated', 'animate_fadeInDown');
+        });
+    </script>
+</body>
+</html>
